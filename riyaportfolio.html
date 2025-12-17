@@ -453,6 +453,47 @@
             margin-bottom: 10px;
         }
 
+        /* Experience tags (pills) */
+        .experience-tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .experience-tags span {
+            display: inline-block;
+            background: rgba(73,54,40,0.04);
+            color: #d6c0b3;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(171,136,109,0.12);
+            font-size: 0.9em;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(16,12,10,0.03);
+            transition: all 0.18s ease;
+        }
+
+        .experience-tags span:hover {
+            background: rgba(171,136,109,0.08);
+            color: #493628;
+            border-color: rgba(171,136,109,0.25);
+            transform: translateY(-3px);
+        }
+
+        /* Project link (Live Demo) color */
+        .project-links a {
+            color: #493628;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .project-links a:hover {
+            color: #ab886d;
+            transform: translateX(5px);
+        }
+
         /* Certifications */
         .cert-grid {
             display: grid;
@@ -618,6 +659,9 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certifications">Certifications</a></li>
+            <a href="https://drive.google.com/file/d/1ryyaBOvs2Chr-iVdpPgPHtHeFzue7dBK/view?usp=drive_link" >
+                Download Resume
+            </a>
         </ul>
     </nav>
 
@@ -629,6 +673,13 @@
                 Driving Innovation with Data &amp; AI: An aspiring data and AI professional seeking to leverage technical expertise and problem-solving skills to drive innovative solutions in a dynamic MNC environment. Committed to delivering data-driven insights and contributing to impactful projects with precision and efficiency.
             </div>
         </section>
+<!--         
+        Resume Download
+        <section id="resume-download" style="text-align:center; padding:30px 20px;">
+            <a href="https://drive.google.com/file/d/1ryyaBOvs2Chr-iVdpPgPHtHeFzue7dBK/view?usp=drive_link" target="_blank" class="cert-card" style="display:inline-block; padding:14px 26px; border-radius:12px; text-decoration:none;">
+                📄 Download Resume
+            </a>
+        </section> -->
 
         <!-- Skills Section -->
         <section id="skills">
@@ -716,18 +767,21 @@
             <div class="experience-item">
                 <h4>AI Internship with Shell &amp; Edunet Foundation</h4>
                 <p class="company">16/06/2025 – 16/07/2025</p>
-                <p>• Completed a 4-week Al internship in collaboration with Shell, focusing on developing and deploying an Al-based project.</p>
-                <p>• Built and optimized a machine learning model achieving 90% accuracy, demonstrating strong analytical and problem-solving skills.</p>
-                <p>• Gained hands-on experience with data preprocessing, model training, and performance evaluation using modern Al tools and frameworks.</p>
-                <p>• Collaborated with peers and mentors to present project outcomes and technical documentation.</p>
+                <p>Developed and deployed AI-based solutions achieving 90% accuracy. Gained hands-on experience with data preprocessing, model training, and performance evaluation using modern AI frameworks.</p>
+                    <div class="experience-tags">
+                        <span>Machine Learning</span>
+                        <span>Model Training</span>
+                        <span>Data Analysis</span>
+                    </div>
             </div>
             <div class="experience-item">
                 <h4>Data Analytics Job Simulation at Deloitte Australia</h4>
-                <p class="company">04/2025</p>
-                <p>• Analyzed 10,000+ transactional records to detect fraud patterns using Excel (PivotTables) and Tableau.</p>
-                <p>• Built interactive dashboards to visualize key business and risk metrics for better decision-making.</p>
-                <p>• Delivered data-driven insights that enhanced fraud detection and risk mitigation strategies.</p>
-            </div>
+                <p>Analyzed 10,000+ transactional records for fraud detection using Excel and Tableau. Built interactive dashboards to visualize key business and risk metrics for enhanced decision-making.</p>
+                    <div class="experience-tags">
+                        <span>Tableau</span>
+                        <span>Data Analysis</span>
+                        <span>Fraud Detection</span>
+                    </div>
         </section>
 
         <!-- Projects Section -->
@@ -737,28 +791,32 @@
             <div class="project-item">
                 <h4>Interactive Weather Dashboard</h4>
                 <p class="info">Weather Power BI Dashboard | 10/2025</p>
-                    <p>• Built an interactive Weather Dashboard in Power BI using real-time data from Weather-API.</p>
-                    <p>• Applied Power Query for data cleaning and transformation of JSON-based weather data.</p>
-                    <p>• Created DAX measures and dynamic parameters for city-wise, real-time analysis.</p>
-                    <p>• Designed a modern, user-friendly dashboard showcasing temperature, humidity, wind, and AQI trends.</p>
+                <p>Real-time weather analytics platform built with Power BI, processing live climate data with advanced visualizations.</p>
+                <div class="project-links">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMTcwNjhlMDQtZDE2MC00N2M4LThmOWItY2U0MzBjN2MxZTNjIiwidCI6IjRhNzhmOWQwLWFiZGUtNDBjNC1hMDg4LTBiOTg5NTk5M2M0YSJ9" target="_blank">Live Demo </a>
+                        
+                </div>
+
             </div>
 
             <div class="project-item">
                 <h4>Random Forest Model for Water Pollutants</h4>
                 <p class="info">Water Quality Prediction | 06/2025 – 07/2025</p>
-                    <p>• Built a Random Forest modelto predict six water pollutants across 22 stations (2000-2021). </p>
-                    <p>• Performed data cleaning and feature engineering using one-hot encoding for station IDs.</p>
-                    <p>• Achieved 0.74 R² (Chloride) and deployed the model on Stream-lit for real-time predictions.</p>
-                    <p>• Gained experience in end-to-end ML workflow from data cleaning to deployment.</p>
+                <p>Advanced Random Forest ML model predicting water pollutants with 90% accuracy across 22 monitoring stations.</p>
+                <div class="project-links">
+                    <a href="https://waterqualityprediction111.streamlit.app/" target="_blank">Live Demo </a>
+                      
+                </div>
             </div>
 
             <div class="project-item">
                 <h4>Real-time American Sign Language (ASL) Recognition</h4>
                 <p class="info">Sign Language Detection | 10/2024 – 11/2024</p>
-                    <p>• Developed a real-time ASL recognition system using Python, OpenCV, and DL.</p>
-                    <p>• Built an end-to-end pipeline for data collection, preprocessing, model training, and live gesture classification.</p>
-                    <p>• Implemented aspect ratio-preserving image preprocessing to enhance model accuracy and consistency.</p>
-                    <p>• Achieved high-accuracy ASL letter recognition (A-Z) with minimal latency in real-time webcam inference.</p>
+                <p>Real-time American Sign Language detection engine using OpenCV and Deep Learning for live gesture recognition.</p>
+                <div class="project-links">
+                    <a href="https://sign-language-prediction1.streamlit.app/" target="_blank">Live Demo </a>
+                        
+                </div>
             </div>
         </section>
 
@@ -797,6 +855,7 @@
 
     <!-- Footer -->
     <footer>
+        <p>&copy; 2025 Riya Soni. All rights reserved. | Built with modern web technologies</p>
         <p>Data &amp; AI Professional | Problem Solver | Innovator</p>
         <div class="social-links">
             <a href="mailto:riyaasoni530@gmail.com">Email</a>
