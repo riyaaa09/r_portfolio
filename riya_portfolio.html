@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Riya Soni - Aspiring Data & AI Professional | Portfolio">
+    <meta name="keywords" content="Data Analytics, AI, Machine Learning, Python">
+    <title>RIYA SONI - Data & AI Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 2px 8px rgba(171, 136, 109, 0.2);
+            }
+            50% {
+                box-shadow: 0 8px 16px rgba(171, 136, 109, 0.4);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #493628;
+            background: linear-gradient(135deg, #e4e0e1 0%, #d6c0b3 100%);
+            background-attachment: fixed;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ab886d 0%, #493628 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            animation: slideInLeft 0.8s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+            margin-top: 20px;
+            animation: slideInRight 0.8s ease-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-info p {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .header-info p:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Navigation */
+        nav {
+            background: #493628;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #d6c0b3;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #d6c0b3;
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling */
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+            transition: all 0.3s ease;
+        }
+
+        section:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        section:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        section:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        section:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        section:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(171, 136, 109, 0.15);
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #ab886d;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #ab886d;
+            padding-bottom: 10px;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        section h3 {
+            font-size: 1.3em;
+            color: #493628;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        /* Objective Section */
+        .objective-text {
+            font-size: 1.1em;
+            color: #493628;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #d6c0b3 0%, #e4e0e1 100%);
+            padding: 20px;
+            border-left: 4px solid #ab886d;
+            border-radius: 4px;
+            animation: slideInLeft 0.8s ease-out;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(171, 136, 109, 0.1);
+        }
+
+        .objective-text:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 18px rgba(171, 136, 109, 0.2);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #e4e0e1 0%, #f9f9f9 100%);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ab886d;
+            animation: fadeIn 0.8s ease-out;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .skill-card:hover::before {
+            left: 100%;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 28px rgba(171, 136, 109, 0.25);
+            border-left-color: #493628;
+        }
+
+        .skill-card h4 {
+            color: #ab886d;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .skill-card:hover h4 {
+            color: #493628;
+        }
+
+        .skill-card p {
+            color: #493628;
+            font-size: 0.95em;
+        }
+
+        /* Education Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            padding-left: 40px;
+            border-left: 3px solid #ab886d;
+            position: relative;
+            animation: slideInLeft 0.8s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            padding-left: 50px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background: #ab886d;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            width: 20px;
+            height: 20px;
+            left: -12px;
+            background: #493628;
+            box-shadow: 0 0 15px rgba(171, 136, 109, 0.5);
+        }
+
+        .timeline-item h4 {
+            color: #493628;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .timeline-item:hover h4 {
+            color: #ab886d;
+        }
+
+        .timeline-item .date {
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: #493628;
+            font-size: 0.95em;
+        }
+
+        /* Experience & Projects */
+        .experience-item, .project-item {
+            background: linear-gradient(135deg, #e4e0e1 0%, #f9f9f9 100%);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ab886d;
+            animation: slideInRight 0.8s ease-out;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::after, .project-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(171, 136, 109, 0.1), transparent);
+            transition: right 0.5s ease;
+        }
+
+        .experience-item:hover, .project-item:hover {
+            transform: translateX(10px) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(171, 136, 109, 0.2);
+            border-left-color: #493628;
+        }
+
+        .experience-item:hover::after, .project-item:hover::after {
+            right: 100%;
+        }
+
+        .experience-item h4, .project-item h4 {
+            color: #493628;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .experience-item:hover h4, .project-item:hover h4 {
+            color: #ab886d;
+        }
+
+        .experience-item .company, .project-item .info {
+            color: #ab886d;
+            font-weight: 600;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .experience-item:hover .company, .project-item:hover .info {
+            color: #493628;
+        }
+
+        .experience-item p, .project-item p {
+            color: #493628;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .cert-card {
+            background: linear-gradient(135deg, #ab886d 0%, #493628 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(171, 136, 109, 0.3);
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-15px) scale(1.08);
+            box-shadow: 0 15px 40px rgba(171, 136, 109, 0.4);
+        }
+
+        .cert-card h4 {
+            margin-bottom: 10px;
+            font-size: 1em;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cert-card:hover h4 {
+            transform: scale(1.1);
+        }
+
+        .cert-card p {
+            font-size: 0.9em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #493628 0%, #3a2820 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            animation: slideInLeft 0.8s ease-out;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: #d6c0b3;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border: 2px solid #d6c0b3;
+            border-radius: 25px;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: white;
+            background: #d6c0b3;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(214, 192, 179, 0.3);
+        }
+
+        /* Responsive */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9em;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .header-info {
+                gap: 15px;
+                flex-direction: column;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-card:hover {
+                transform: translateY(-8px) scale(1.02);
+            }
+
+            .cert-card:hover {
+                transform: translateY(-10px) scale(1.05);
+            }
+
+            .experience-item:hover,
+            .project-item:hover {
+                transform: translateX(5px) translateY(-3px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>RIYA SONI</h1>
+        <div class="header-info">
+            <p>📧 riyaasoni530@gmail.com</p>
+            <p>📞 9174420169</p>
+            <p>📍 Jabalpur, Madhya Pradesh, India</p>
+            <p>🔗 <a href="https://linkedin.com/in/riya-soni-177802267/" target="_blank" style="color: white;">LinkedIn</a></p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#objective">Objective</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Objective Section -->
+        <section id="objective">
+            <h2>🎯 Objective</h2>
+            <div class="objective-text">
+                Driving Innovation with Data & AI: An aspiring data and AI professional seeking to leverage technical expertise and problem-solving skills to drive innovative solutions in a dynamic MNC environment. Committed to delivering data-driven insights and contributing to impactful projects with precision and efficiency.
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>💡 Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Programming Languages</h4>
+                    <p>Python, Java</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Database & Backend</h4>
+                    <p>SQL, Tableau, Excel, Google Data Studio</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Tools</h4>
+                    <p>Streamlit, CV Zone, OpenCV</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Frontend Technologies</h4>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Machine Learning</h4>
+                    <p>Regression models, Feature engineering, Statistical modeling</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Computer Science</h4>
+                    <p>OOPS, DBMS</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 40px; margin-bottom: 20px;">🤝 Soft Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Leadership</h4>
+                    <p>Guiding teams towards shared goals</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Teamwork</h4>
+                    <p>Collaborating effectively with peers</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Adaptability</h4>
+                    <p>Thriving in dynamic environments</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Problem-Solving</h4>
+                    <p>Analytical approach to challenges</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Critical Thinking</h4>
+                    <p>Evaluating information for optimal solutions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>🎓 Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Bachelor of Technology in Computer Science (AI-ML)</h4>
+                    <p class="company">Gyan Ganga Institute of Technology and Sciences</p>
+                    <p class="date">11/2022 – 06/2026</p>
+                    <p><strong>CGPA:</strong> 7.31</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Higher Secondary Education (Class XII)</h4>
+                    <p class="company">Small Wonders Sr. Sec. School, Jabalpur</p>
+                    <p class="date">04/2021 – 03/2022</p>
+                    <p><strong>Percentage:</strong> 77%</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Secondary Education (Class X)</h4>
+                    <p class="company">Small Wonders Sr. Sec. School, Jabalpur</p>
+                    <p class="date">04/2019 – 03/2020</p>
+                    <p><strong>Percentage:</strong> 72%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>💼 Experience</h2>
+            <div class="experience-item">
+                <h4>AI Internship with Shell & Edunet Foundation</h4>
+                <p class="company">16/06/2025 – 16/07/2025</p>
+                <p>• Completed a 4-week Al internship in collaboration with Shell, focusing on developing and deploying an Al-based project.</p>
+                <p>• Built and optimized a machine learning model achieving 90% accuracy, demonstrating strong analytical and problem-solving skills.</p>
+                <p>• Gained hands-on experience with data preprocessing, model training, and performance evaluation using modern Al tools and frameworks.</p>
+                <p>• Collaborated with peers and mentors to present project outcomes and technical documentation.</p>
+            </div>
+            <div class="experience-item">
+                <h4>Data Analytics Job Simulation at Deloitte Australia</h4>
+                <p class="company">04/2025</p>
+                <p>• Analyzed 10,000+ transactional records to detect fraud patterns using Excel (PivotTables) and Tableau.</p>
+                <p>• Built interactive dashboards to visualize key business and risk metrics for better decision-making.</p>
+                <p>• Delivered data-driven insights that enhanced fraud detection and risk mitigation strategies.</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>🚀 Projects</h2>
+            
+            <div class="project-item">
+                <h4>Interactive Weather Dashboard</h4>
+                <p class="info">Weather Power BI Dashboard | 10/2025</p>
+                    <p>• Built an interactive Weather Dashboard in Power BI using real-time data from Weather-API.</p>
+                    <p>• Applied Power Query for data cleaning and transformation of JSON-based weather data.</p>
+                    <p>• Created DAX measures and dynamic parameters for city-wise, real-time analysis.</p>
+                    <p>• Designed a modern, user-friendly dashboard showcasing temperature, humidity, wind, and AQI trends.</p>
+            </div>
+
+            <div class="project-item">
+                <h4>Random Forest Model for Water Pollutants</h4>
+                <p class="info">Water Quality Prediction | 06/2025 – 07/2025</p>
+                    <p>• Built a Random Forest modelto predict six water pollutants across 22 stations (2000-2021). </p>
+                    <p>• Performed data cleaning and feature engineering using one-hot encoding for station IDs.</p>
+                    <p>• Achieved 0.74 R² (Chloride) and deployed the model on Stream-lit for real-time predictions.</p>
+                    <p>• Gained experience in end-to-end ML workflow from data cleaning to deployment.</p>
+            </div>
+
+            <div class="project-item">
+                <h4>Real-time American Sign Language (ASL) Recognition</h4>
+                <p class="info">Sign Language Detection | 10/2024 – 11/2024</p>
+                    <p>• Developed a real-time ASL recognition system using Python, OpenCV, and DL.</p>
+                    <p>• Built an end-to-end pipeline for data collection, preprocessing, model training, and live gesture classification.</p>
+                    <p>• Implemented aspect ratio-preserving image preprocessing to enhance model accuracy and consistency.</p>
+                    <p>• Achieved high-accuracy ASL letter recognition (A-Z) with minimal latency in real-time webcam inference.</p>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2>🏆 Certifications & Volunteer Work</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <h4>Cisco Networking Academy</h4>
+                    <p>Programming Essentials in Python</p>
+                    <p>Introduction to Data Science</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Simplilearn</h4>
+                    <p>Generative AI-For-Everyone</p>
+                    <p>Power BI for Beginners</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Google Cloud</h4>
+                    <p>Gen AI Academy</p>
+                    <p>Prompt Design in Vertex AI</p>
+                    <p>Build Real World AI Applications with Gemini and Imagen</p>
+                </div>
+                <div class="cert-card">
+                    <h4>AWS</h4>
+                    <p>AWS Cloud Foundation</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Volunteer</h4>
+                    <p>Internal Volunteer</p>
+                    <p>NGO (Day Foundation)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Data & AI Professional | Problem Solver | Innovator</p>
+        <div class="social-links">
+            <a href="mailto:riyaasoni530@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/riya-soni-177802267/" target="_blank">LinkedIn</a>
+            <a href="tel:+919174420169">Call</a>
+        </div>
+    </footer>
+</body>
+</html>
